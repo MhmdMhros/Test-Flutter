@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_flutter/presentation/pages/product/product_details.dart';
 import 'package:test_flutter/presentation/widgets/custom_text.dart';
 import 'package:test_flutter/presentation/widgets/explore_dish.dart';
 import 'package:test_flutter/presentation/widgets/popular_today.dart';
@@ -174,7 +175,13 @@ class HomeScreen extends StatelessWidget {
                     width: double.infinity,
                     height: 40,
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ProductDetails()),
+                        );
+                      },
                       color: const Color(0xFF067B96),
                       child: const CustomText(
                         text: 'Free delivery, on us',
