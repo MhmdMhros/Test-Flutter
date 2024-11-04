@@ -43,14 +43,20 @@ class LikeMight extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(3),
                         color: Colors.white),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Center(
-                        child: Icon(
-                          Icons.add,
-                          color: Colors.blue,
-                          size: 20,
-                        ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsetsDirectional.only(
+                    start: 47,
+                    top: 42,
+                  ),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: const Center(
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.blue,
+                        size: 20,
                       ),
                     ),
                   ),

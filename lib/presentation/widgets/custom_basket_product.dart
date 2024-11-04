@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:test_flutter/presentation/widgets/custom_text.dart';
 
@@ -80,27 +81,45 @@ class CustomBasketProduct extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            SizedBox(
+            Container(
               width: 80,
               height: 25,
-              child: MaterialButton(
-                onPressed: () {},
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3),
                 color: const Color(0xFF067B96),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(3),
-                ),
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.delete_outline_outlined,
-                        color: Colors.white,
-                        size: 15,
-                      ),
+              ),
+              child: Stack(
+                children: [
+                  IconButton(
+                    padding: const EdgeInsetsDirectional.only(
+                        start: 0, end: 10, top: 6, bottom: 10),
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.delete_outline_rounded,
+                      color: Colors.white,
+                      size: 15,
                     ),
-                  ],
-                ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsetsDirectional.only(
+                        start: 39, end: 0, top: 4, bottom: 0),
+                    child: CustomText(
+                      text: '1',
+                      color: Colors.white,
+                      fontSize: 12,
+                    ),
+                  ),
+                  IconButton(
+                    padding: const EdgeInsetsDirectional.only(
+                        start: 55, end: 0, top: 6, bottom: 10),
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.add,
+                      color: Colors.white,
+                      size: 15,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
